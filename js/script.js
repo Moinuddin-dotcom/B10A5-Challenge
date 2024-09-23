@@ -51,3 +51,9 @@ document.getElementById('quotaDonateBtn').addEventListener('click', function () 
         alert('Input valid Amount')
     }
 })
+
+
+
+// btn color adding
+
+// document.getElementById('donate-btn').onclick.style.backgroundColor = 'green'
