@@ -1,5 +1,6 @@
 
 document.getElementById('noakhaliDonateBtn').addEventListener('click', function () {
+
     const noakhaliInput = parseFloat(document.getElementById('noaInputBtn').value)
     if (noakhaliInput > 0) {
         let changeNumber = parseFloat(document.getElementById('noakhaliTotalAmount').innerText)
@@ -21,7 +22,7 @@ document.getElementById('noakhaliDonateBtn').addEventListener('click', function 
     historyNewDiv.className = 'bg-white p-4 mt-4 mb-4 rounded-2xl border-2 border-gray-500 space-y-4'
 
     historyNewDiv.innerHTML = `
-    <p class="font-bold text-xl">${noakhaliInput.toFixed(2)} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+    <p class="font-bold text-xl">${noakhaliInput.toFixed(2)} Taka is Donate for Flood at Noakhali, Bangladesh</p>
     <p class="text-gray-400 text-sm">${new Date()}</p>
     `
     const historyContainer = document.getElementById('historyStatus')
@@ -71,13 +72,16 @@ document.getElementById('quotaDonateBtn').addEventListener('click', function () 
 
 
 
-let getHistoryBtn = document.getElementById('history-btn')
-let getDonateBtn = document.getElementById('donate-btn')
+const getHistoryBtn = document.getElementById('history-btn')
+const getDonateBtn = document.getElementById('donate-btn')
+
 getHistoryBtn.addEventListener('click', function () {
     getHistoryBtn.classList.add("bg-[#B4F461]", "text-black", "font-bold");
     getHistoryBtn.classList.remove("hover:bg-white")
     getHistoryBtn.style.backgroundColor = "#B4F461";
     getHistoryBtn.style.color = "black";
+
+
 
     getDonateBtn.classList.remove("bg-[#B4F461]", "text-black", "font-bold")
     getDonateBtn.classList.remove("hover:bg-black")
@@ -85,4 +89,21 @@ getHistoryBtn.addEventListener('click', function () {
 
     document.getElementById('fullSection').classList.add('hidden')
 
+    document.getElementById('historyStatus').classList.remove('hidden')
+})
+
+
+
+getDonateBtn.addEventListener('click', function () {
+    getDonateBtn.classList.add("bg-[#B4F461]", "text-black", "font-bold")
+    getDonateBtn.classList.remove("hover:bg-[#B4F461]")
+    getDonateBtn.style.backgroundColor = '#B4F461'
+    getDonateBtn.style.color = 'black'
+
+    getHistoryBtn.classList.remove("bg-[#B4F461]", "text-black", "font-bold")
+    getHistoryBtn.style.backgroundColor = "white";
+    getHistoryBtn.style.color = "gray"
+
+
+    document.getElementById('fullSection').classList.remove('hidden')
 })
