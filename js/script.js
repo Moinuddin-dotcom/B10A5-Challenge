@@ -15,6 +15,19 @@ document.getElementById('noakhaliDonateBtn').addEventListener('click', function 
     else {
         alert('Input valid Amount')
     }
+
+
+    let historyNewDiv = document.createElement('div')
+    historyNewDiv.className = 'bg-white p-4 mt-4 mb-4 rounded-2xl border-2 border-gray-500 space-y-4'
+
+    historyNewDiv.innerHTML = `
+    <p class="font-bold text-xl">${noakhaliInput.toFixed(2)} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+    <p class="text-gray-400 text-sm">${new Date()}</p>
+    `
+    const historyContainer = document.getElementById('historyStatus')
+    historyContainer.insertBefore(historyNewDiv, historyContainer.firstChild)
+
+
 })
 
 document.getElementById('feniDonateBtn').addEventListener('click', function () {
@@ -56,4 +69,20 @@ document.getElementById('quotaDonateBtn').addEventListener('click', function () 
 
 // btn color adding
 
-// document.getElementById('donate-btn').onclick.style.backgroundColor = 'green'
+
+
+let getHistoryBtn = document.getElementById('history-btn')
+let getDonateBtn = document.getElementById('donate-btn')
+getHistoryBtn.addEventListener('click', function () {
+    getHistoryBtn.classList.add("bg-[#B4F461]", "text-black", "font-bold");
+    getHistoryBtn.classList.remove("hover:bg-white")
+    getHistoryBtn.style.backgroundColor = "#B4F461";
+    getHistoryBtn.style.color = "black";
+
+    getDonateBtn.classList.remove("bg-[#B4F461]", "text-black", "font-bold")
+    getDonateBtn.classList.remove("hover:bg-black")
+    getDonateBtn.style.backgroundColor = "white";
+
+    document.getElementById('fullSection').classList.add('hidden')
+
+})
