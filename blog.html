@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .lexend {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black lexend">
+    <nav class="flex justify-around items-center h-28 bg-[#F9F7F3] sticky top-0 bg-opacity-[0.9]">
+        <button class="btn bg-[#B4F461] hover:bg-[#B4F461] text-black font-bold border-none"><a
+                href="./blog.html">Blog</a></button>
+        <button
+            class="btn btn-wide bg-[#F9F7F3] hover:bg-white text-black font-bold border-none hidden md:flex justify-center items-center">
+            <img class="h-7" src="./assets/logo.png" alt="" srcset="">
+            <a href="./index.html">Donate Bangladesh</a></button>
+        <button class="btn bg-[#F9F7F3] hover:bg-white text-black font-bold border-none">
+            <img class="h-7" src="./assets/coin.png" alt="">
+            <div id="getOpeningBlance">200000</div> BDT
+        </button>
+    </nav>
+    <main class="max-w-[85vw] m-auto">
+        <h1 class="font-bold text-4xl p-4">Important FAQ</h1>
+        <div class="gap h-5"></div>
+        <!-- Questions -->
+
+        <div class="collapse collapse-plus">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is The Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>(DOM) is a programming interface for web documents, like HTML or XML. It represents the page as a
+                    structured tree of objects, where each object corresponds to a part of the document—like elements,
+                    attributes, and text. With the DOM, you can manipulate the content and structure of a web page
+                    dynamically, which is essential for interactive features.
+
+                    Imagine the DOM as a bridge between your HTML and JavaScript. For example, when you click a button,
+                    like in your donation form for the "History" button, you're using JavaScript to interact with the
+                    DOM to hide or show sections of your page. Each element in your HTML, like a button, div, or even
+                    text, becomes an object in the DOM that you can modify. It’s what allows you to change styles,
+                    update content, and make your web app come alive.
+
+                    Given that you're building projects like a Netflix clone and working with Tailwind CSS and Node.js,
+                    the DOM is the core mechanism that helps you control how your elements are displayed and behave
+                    dynamically on the page. It’s what lets you make interactive and responsive web applications.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-plus">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the dom?</div>
+            <div class="collapse-content">
+                <p>There are several ways to select elements from the DOM. Like : getElementsByClassName() ,
+                    getElementById(), querySelectorAll(),querySelector(), getElementsByTagName(),getElementsByName . We
+                    have more of this kind of methods to manipulate DOM but this are most used cases. </p>
+            </div>
+        </div>
+        <div class="collapse collapse-plus">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM and why
+                is it useful?</div>
+            <div class="collapse-content">
+                <p>Event delegation is a technique in the DOM where a single event listener is added to a parent element
+                    to handle events from its child elements. It works due to event bubbling, where events on child
+                    elements propagate up to their parents. This method improves performance by avoiding multiple event
+                    listeners on individual elements, especially in cases with many or dynamically created elements. It
+                    also simplifies code by centralizing event handling, making it easier to maintain and update. Event
+                    delegation is a practical approach to efficiently manage events in dynamic web applications.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-plus">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles
+                using the DOM?</div>
+            <div class="collapse-content">
+                <p>To modify an element's attributes using the DOM, we can use methods like setAttribute() to update or
+                    add an attribute and getAttribute() to retrieve its current value. We can also directly modify
+                    properties, such as updating an element’s ID or class.
+                    For styling, the style property allows us to modify the CSS of an element. We can change individual
+                    styles, such as <br>element.style.color = 'blue' <br> to set the text color to blue, or
+                    <br>element.style.backgroundColor = 'yellow' <br> to change the background color. To apply multiple
+                    styles at once, we can use <br> element.style.cssText <br>
+                </p>
+            </div>
+        </div>
+        
+
+    </main>
+    <footer class="h-[29vh] bg-[#F9F7F3]"></footer>
+</body>
+
+</html>
