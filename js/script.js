@@ -46,6 +46,19 @@ document.getElementById('feniDonateBtn').addEventListener('click', function () {
     } else {
         alert('Input valid Amount')
     }
+
+
+
+    let historyNewDivForFeni = document.createElement('div')
+    historyNewDivForFeni.className = 'bg-white p-4 mt-4 mb-4 rounded-2xl border-2 border-gray-500 space-y-4'
+
+    historyNewDivForFeni.innerHTML = `
+    <p class="font-bold text-xl">${feniInput.toFixed(2)} Taka is Donate for Flood Relief in Feni,Bangladesh</p>
+    <p class="text-gray-400 text-sm">${new Date()}</p>
+    `
+    const historyContainerForFeni = document.getElementById('historyStatus2')
+    historyContainerForFeni.insertBefore(historyNewDivForFeni, historyContainerForFeni.firstChild)
+
 })
 
 
@@ -64,6 +77,18 @@ document.getElementById('quotaDonateBtn').addEventListener('click', function () 
     } else {
         alert('Input valid Amount')
     }
+
+
+    let historyNewDivForQuota = document.createElement('div')
+    historyNewDivForQuota.className = 'bg-white p-4 mt-4 mb-4 rounded-2xl border-2 border-gray-500 space-y-4'
+
+    historyNewDivForQuota.innerHTML = `
+    <p class="font-bold text-xl">${quotaInput.toFixed(2)} Taka is Aid for Injured in the Quota Movement</p>
+    <p class="text-gray-400 text-sm">${new Date()}</p>
+    `
+    const historyContainerForQuota = document.getElementById('historyStatus3')
+    historyContainerForQuota.insertBefore(historyNewDivForQuota, historyContainerForQuota.firstChild)
+
 })
 
 
@@ -90,6 +115,8 @@ getHistoryBtn.addEventListener('click', function () {
     document.getElementById('fullSection').classList.add('hidden')
 
     document.getElementById('historyStatus').classList.remove('hidden')
+    document.getElementById('historyStatus2').classList.remove('hidden')
+    document.getElementById('historyStatus3').classList.remove('hidden')
 })
 
 
@@ -106,4 +133,8 @@ getDonateBtn.addEventListener('click', function () {
 
 
     document.getElementById('fullSection').classList.remove('hidden')
+
+    document.getElementById('historyStatus').classList.add('hidden')
+    document.getElementById('historyStatus2').classList.add('hidden')
+    document.getElementById('historyStatus3').classList.add('hidden')
 })
