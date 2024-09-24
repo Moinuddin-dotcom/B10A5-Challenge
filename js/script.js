@@ -4,11 +4,11 @@ document.getElementById('noakhaliDonateBtn').addEventListener('click', function 
     if (noakhaliInput > 0) {
         let changeNumber = parseFloat(document.getElementById('noakhaliTotalAmount').innerText)
         const newChange = changeNumber + noakhaliInput
-        document.getElementById('noakhaliTotalAmount').innerText = newChange
+        document.getElementById('noakhaliTotalAmount').innerText = newChange.toFixed(2)
 
         const openingBlance = parseFloat(document.getElementById('getOpeningBlance').innerText)
         const newOpeningBlance = openingBlance - noakhaliInput
-        document.getElementById('getOpeningBlance').innerText = newOpeningBlance
+        document.getElementById('getOpeningBlance').innerText = newOpeningBlance.toFixed(2)
 
         document.getElementById('my_modal_1').showModal()
     }
@@ -22,14 +22,14 @@ document.getElementById('feniDonateBtn').addEventListener('click', function () {
     if (feniInput > 0) {
         const feniChangeNumber = parseFloat(document.getElementById('feniTotalAmount').innerText)
         const feniNewNumber = feniChangeNumber + feniInput
-        document.getElementById('feniTotalAmount').innerText = feniNewNumber
+        document.getElementById('feniTotalAmount').innerText = feniNewNumber.toFixed(2)
 
         const openingSpell = parseFloat(document.getElementById('getOpeningBlance').innerText)
         const newOpeningSpell = openingSpell - feniInput
-        document.getElementById('getOpeningBlance').innerText = newOpeningSpell
+        document.getElementById('getOpeningBlance').innerText = newOpeningSpell.toFixed(2)
         document.getElementById('my_modal_2').showModal()
 
-    }else{
+    } else {
         alert('Input valid Amount')
     }
 })
@@ -40,14 +40,14 @@ document.getElementById('quotaDonateBtn').addEventListener('click', function () 
     if (quotaInput > 0) {
         const quotaChangeNumber = parseFloat(document.getElementById('quotaTotalAmount').innerText)
         const quotaNewNumber = quotaChangeNumber + quotaInput
-        document.getElementById('quotaTotalAmount').innerText = quotaNewNumber
+        document.getElementById('quotaTotalAmount').innerText = quotaNewNumber.toFixed(2)
 
         const openingAmount = parseFloat(document.getElementById('getOpeningBlance').innerText)
         const newOpeningAmount = openingAmount - quotaInput
-        document.getElementById('getOpeningBlance').innerText = newOpeningAmount
+        document.getElementById('getOpeningBlance').innerText = newOpeningAmount.toFixed(2)
         document.getElementById('my_modal_3').showModal()
 
-    }else{
+    } else {
         alert('Input valid Amount')
     }
 })
